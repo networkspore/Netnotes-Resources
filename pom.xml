@@ -9,46 +9,23 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <exec.mainClass>io.netnotes.resources.Main</exec.mainClass>
+        <exec.mainClass>io.netnotes.Main</exec.mainClass>
     </properties>
 
     <dependencies>
 
-        <dependency>
-            <groupId>org.apache.xmlgraphics</groupId>
-            <artifactId>batik-all</artifactId>
-            <version>1.18</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-swing</artifactId>
-            <version>26-ea+10</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>26-ea+10</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-base</artifactId>
-            <version>26-ea+10</version>
-        </dependency>
+      
 
     </dependencies>
     
         <build>
             <plugins>
        
-        
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-shade-plugin</artifactId>
-                    <version>3.4.1</version>
+                    <version>3.6.1</version>
                     <executions>
                         <execution>
                             <phase>package</phase>
@@ -58,7 +35,7 @@
                             <configuration>
                                 <transformers>
                                     <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                        <mainClass>io.netnotes.resources.Main</mainClass>
+                                        <mainClass>io.netnotes.Main</mainClass>
                                     </transformer>
                                 </transformers>
                                 <filters>

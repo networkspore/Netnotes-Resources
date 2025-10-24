@@ -1,4 +1,4 @@
-package io.netnotes.resources;
+package io.netnotes;
 
 public class Main {
 
